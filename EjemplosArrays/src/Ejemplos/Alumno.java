@@ -8,12 +8,12 @@ public class Alumno implements Comparable<Alumno> {
 	private int notaFinal;
 	
 	
-	public Alumno(String dni, String nombre, String direccion, int notaFinal) {
+	public Alumno(String dni, String nombre, String direccion, int notaFinal)  throws AlumnoException{
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.direccion = direccion;
-		this.notaFinal=notaFinal;
+		this.setNotaFinal(notaFinal);
 	}
 	public String getDni() {
 		return dni;
@@ -29,8 +29,12 @@ public class Alumno implements Comparable<Alumno> {
 	public int getNotaFinal() {
 		return notaFinal;
 	}
-	public void setNotaFinal(int notaFinal) {
-		this.notaFinal = notaFinal;
+	public void setNotaFinal(int notaFinal) throws AlumnoException{
+		if (notaFinal < 0 || notaFinal > 10) {
+			throw new AlumnoException("Nota no válida");
+		}else {
+			this.notaFinal = notaFinal;
+		}
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
@@ -50,7 +54,7 @@ public class Alumno implements Comparable<Alumno> {
 	public int compareTo(Alumno otroAlumno) {
 		
 //		Comparacion creciente por nota
-//		int comparacion=0;
+		int comparacion=0;
 //		if ( this.notaFinal > otroAlumno.notaFinal) {
 //			comparacion=1;
 //		}
@@ -63,10 +67,13 @@ public class Alumno implements Comparable<Alumno> {
 //		return comparacion;
 	
 //		Comparacion creciente por nota, de otra forma
-		return Integer.compare(this.notaFinal, otroAlumno.notaFinal);
+//		return Integer.compare(this.notaFinal, otroAlumno.notaFinal);
 
 //		Comparación decreciente por nombre del alumno
 		//return (-1)*this.nombre.compareTo( otroAlumno.nombre);
+	
+//		Comparar por nombre
+		return this.nombre.compareTo(otroAlumno.getNombre());
 		
 		
 	}
