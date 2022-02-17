@@ -13,11 +13,14 @@ public class Ej07 {
 	public static void main(String[] args) {
 		int[] lista = new int[12];
 		lista = crearArray(lista);
-		Ej06.mostrarArray(lista);
+		mostrarArray(lista);
+		System.out.print("Numero: ");
 		int num = Integer.parseInt(kb.nextLine());
+		System.out.println();
+		System.out.print("Posicion: ");
 		int pos = Integer.parseInt(kb.nextLine());
 		lista = meterNumero(lista, num, pos);
-		Ej06.mostrarArray(lista);
+		mostrarArray(lista);
 
 	}
 	
@@ -38,6 +41,17 @@ public class Ej07 {
 		lista[pos] = num;
 		
 		return lista;
+	}
+	
+	public static void mostrarArray(int[] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.print(i + "\t");
+		}
+		
+		for (int i = 0; i < lista.length; i++) {
+			System.out.print(lista[i] + ", ");
+		}
+		System.out.println();
 	}
 
 }
