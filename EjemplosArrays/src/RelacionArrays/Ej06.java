@@ -14,7 +14,7 @@ public class Ej06 {
 	
 	public static int[] crearArray(int[] lista) {
 		for (int i = 0; i < lista.length; i++) {
-			lista[i] = (int)(Math.random()*100);
+			lista[i] = (int)(Math.random()*101);
 		}
 		
 		return lista;
@@ -24,12 +24,15 @@ public class Ej06 {
 		int[] listaAux = new int[20];
 		int contador = 0;
 		
+		//Bucle para añadir pares
 		for (int i = 0; i < lista.length; i++) {
 			if (lista[i] % 2 == 0) {
 				listaAux[contador] = lista[i];
 				contador++;
 			}
 		}
+		
+		//Bucle para añadir impares
 		for (int i = 0; i < lista.length; i++) {
 			if (lista[i] % 2 != 0) {
 				listaAux[contador] = lista[i];
