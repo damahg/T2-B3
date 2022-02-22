@@ -1,6 +1,6 @@
 package Ej01;
 import java.util.Scanner;
-public class Principal {
+public class PrincipalRefran {
 	private static Scanner kb = new Scanner (System.in);
 	private static final int MAXIMO_REFRANES = 50;
 
