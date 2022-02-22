@@ -1,3 +1,5 @@
+package Ej02;
+
 
 public class Carta {
 	public static final int CARTAS_POR_PALO = 12;
