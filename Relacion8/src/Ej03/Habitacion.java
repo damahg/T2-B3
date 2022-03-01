@@ -6,7 +6,7 @@ public class Habitacion {
 	private String tipo;
 	private boolean ocupada;
 	
-	public static final String[] TIPOS_HABITACIONES= {"SIMPLE", "DOBLE", "TIPLE"};
+	public static final String[] TIPOS_HABITACIONES= {"SIMPLE", "DOBLE", "TRIPLE"};
 	
 	//Falta completar el control de errores en este método
 	//Tirando la excepción cuando sea necesario
@@ -28,6 +28,10 @@ public class Habitacion {
 	public boolean isOcupada() {
 		return ocupada;
 	}
+	
+	public void setOcupada(boolean ocupada) {
+		this.ocupada = ocupada;
+	}
 
 	@Override
 	public String toString() {
@@ -42,6 +46,9 @@ public class Habitacion {
 		return cadena;
 	}
 
+	
+
+	
 
 	
 	
