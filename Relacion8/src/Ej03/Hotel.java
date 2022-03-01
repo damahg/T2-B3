@@ -99,7 +99,8 @@ public class Hotel {
 		}else {
 			throw new HotelException("No hay habitaciones libres de ese tipo");
 		}
-	}
+		
+	}//checkIn
 	
 	public void checkOut(int numero) {
 		for (int i = 0; i < habitaciones.length; i++) {
@@ -107,7 +108,6 @@ public class Hotel {
 				habitaciones[i].setOcupada(false);
 			}
 		}//for
-		
 		System.out.println("Check-Out correcto");
-	}
+	}//checkOut
 }
