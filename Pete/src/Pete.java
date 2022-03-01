@@ -16,6 +16,6 @@ public class Pete {
 	public static void llenar2(int[] pete) {
 		for (int i = 0; i < pete.length; i++) {
 			System.out.println(pete[i]);
+		}
 	}
-
 }
